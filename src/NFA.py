@@ -135,8 +135,8 @@ class NFA:
         end = State()
         nfa.edges.append(Edge(start, nfa.start, "epsilon"))
         nfa.edges.append(Edge(start, end, "epsilon"))
+        nfa.edges.append(Edge(nfa.end, end, "epsilon"))
         nfa.edges.append(Edge(nfa.end, start, "epsilon"))
-        nfa.edges.append(Edge(nfa.end, nfa.start, "epsilon"))
         nfa.states.extend([start, end])
         nfa.start = start
         nfa.end = end
@@ -331,4 +331,4 @@ class NFA:
             postfix.append(stack.pop())
         return postfix
 
-nfa=NFA("[abc]g*")
+nfa=NFA("[a-c012]g*")
