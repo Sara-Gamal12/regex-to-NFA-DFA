@@ -14,10 +14,8 @@ precedence={
 @dataclass
 class State:
     index: int = 0
-
     def __post_init__(self):
         self.index = State._generate_index()
-
     @staticmethod
     def _generate_index():
         if not hasattr(State, "_index_counter"):
@@ -42,7 +40,6 @@ class NFA_node:
      
 class NFA:
     def __init__(self, regex):
-     
         if not self.is_valid_regex(regex):
             raise ValueError("Invalid regex")
         tokens=self.tokenize(regex)
@@ -70,7 +67,10 @@ class NFA:
                 nfa_json[str(edge_from.index)][edge.label]=[str(edge_to.index)]
             else:
                 nfa_json[str(edge_from.index)][edge.label].append(str(edge_to.index))
-        print(json.dumps(nfa_json, indent=4))
+
+        ##save the nfa to a json file
+        with open("nfa.json","w", encoding="utf-8") as file:
+            json.dump(nfa_json,file,indent=4, ensure_ascii=False)
         return nfa_json
     def build_nfa(self, postfix):
         stack=[]

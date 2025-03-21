@@ -1,5 +1,7 @@
 digraph {
 	20 [fillcolor=lightgrey shape=circle style=filled]
+	"" [shape=point]
+	"" -> 20 [label=start]
 	0 [shape=circle]
 	0 -> 1 [label=a]
 	1 [shape=circle]

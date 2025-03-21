@@ -1,0 +1,163 @@
+{
+    "startingState": "20",
+    "0": {
+        "isTerminatingState": false,
+        "a": [
+            "1"
+        ]
+    },
+    "1": {
+        "isTerminatingState": false,
+        "ε": [
+            "5"
+        ]
+    },
+    "2": {
+        "isTerminatingState": false,
+        "b": [
+            "3"
+        ]
+    },
+    "3": {
+        "isTerminatingState": false,
+        "ε": [
+            "5"
+        ]
+    },
+    "5": {
+        "isTerminatingState": false,
+        "ε": [
+            "9"
+        ]
+    },
+    "4": {
+        "isTerminatingState": false,
+        "ε": [
+            "0",
+            "2"
+        ]
+    },
+    "6": {
+        "isTerminatingState": false,
+        "c": [
+            "7"
+        ]
+    },
+    "7": {
+        "isTerminatingState": false,
+        "ε": [
+            "9"
+        ]
+    },
+    "9": {
+        "isTerminatingState": false,
+        "ε": [
+            "13"
+        ]
+    },
+    "8": {
+        "isTerminatingState": false,
+        "ε": [
+            "4",
+            "6"
+        ]
+    },
+    "10": {
+        "isTerminatingState": false,
+        "0": [
+            "11"
+        ]
+    },
+    "11": {
+        "isTerminatingState": false,
+        "ε": [
+            "13"
+        ]
+    },
+    "13": {
+        "isTerminatingState": false,
+        "ε": [
+            "17"
+        ]
+    },
+    "12": {
+        "isTerminatingState": false,
+        "ε": [
+            "8",
+            "10"
+        ]
+    },
+    "14": {
+        "isTerminatingState": false,
+        "1": [
+            "15"
+        ]
+    },
+    "15": {
+        "isTerminatingState": false,
+        "ε": [
+            "17"
+        ]
+    },
+    "17": {
+        "isTerminatingState": false,
+        "ε": [
+            "21"
+        ]
+    },
+    "16": {
+        "isTerminatingState": false,
+        "ε": [
+            "12",
+            "14"
+        ]
+    },
+    "18": {
+        "isTerminatingState": false,
+        "2": [
+            "19"
+        ]
+    },
+    "19": {
+        "isTerminatingState": false,
+        "ε": [
+            "21"
+        ]
+    },
+    "21": {
+        "isTerminatingState": false,
+        "ε": [
+            "24"
+        ]
+    },
+    "20": {
+        "isTerminatingState": false,
+        "ε": [
+            "16",
+            "18"
+        ]
+    },
+    "22": {
+        "isTerminatingState": false,
+        "g": [
+            "23"
+        ]
+    },
+    "23": {
+        "isTerminatingState": false,
+        "ε": [
+            "25",
+            "24"
+        ]
+    },
+    "24": {
+        "isTerminatingState": false,
+        "ε": [
+            "22",
+            "25"
+        ]
+    },
+    "25": {
+        "isTerminatingState": true
+    }
+}

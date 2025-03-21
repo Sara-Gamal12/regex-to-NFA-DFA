@@ -9,6 +9,9 @@ def draw_nfa(nfa, output_file="nfa_graph"):
 
     ##color the starting state
     dot.node(start_state, shape="circle", style="filled", fillcolor="lightgrey")
+    ##add edge to starting state from no where
+    dot.node("", shape="point")  # Add an invisible starting point
+    dot.edge("", start_state, label="start")
 
     
     for state, transitions in nfa.items():
