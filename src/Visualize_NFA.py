@@ -23,7 +23,8 @@ def draw_nfa(nfa, output_file="nfa_graph"):
         # Add transitions
         for symbol, target_state in transitions.items():
             if symbol != "isTerminatingState":  # Avoid unnecessary key
-                dot.edge(state, target_state, label=symbol)
+                for target in target_state:
+                     dot.edge(state, target, label=symbol)
 
     
     # Render and save the graph
