@@ -53,20 +53,20 @@ class NFA:
 
     def construct_json(self,nfa):
         nfa_json={}
-        nfa_json["startingState"] = str(nfa.start.index)
+        nfa_json["startingState"] = "s"+str(nfa.start.index)
         for state in nfa.states:
-            nfa_json[str(state.index)]={}
-            nfa_json[str(state.index)]["isTerminatingState"]=state==nfa.end
+            nfa_json["s"+str(state.index)]={}
+            nfa_json["s"+str(state.index)]["isTerminatingState"]=state==nfa.end
 
         for edge in nfa.edges:
             edge_from=edge.from_
             edge_to=edge.to
             if edge.label=="epsilon":
                 edge.label="ε"
-            if  not edge.label in nfa_json[str(edge_from.index)] :
-                nfa_json[str(edge_from.index)][edge.label]=[str(edge_to.index)]
+            if  not edge.label in nfa_json["s"+str(edge_from.index)] :
+                nfa_json["s"+str(edge_from.index)][edge.label]=["s"+str(edge_to.index)]
             else:
-                nfa_json[str(edge_from.index)][edge.label].append(str(edge_to.index))
+                nfa_json["s"+str(edge_from.index)][edge.label].append("s"+str(edge_to.index))
 
         ##save the nfa to a json file
         with open("nfa.json","w", encoding="utf-8") as file:
@@ -331,4 +331,4 @@ class NFA:
             postfix.append(stack.pop())
         return postfix
 
-nfa=NFA("[a-c012]g*")
+nfa=NFA("(a*b)(b?a+)")
