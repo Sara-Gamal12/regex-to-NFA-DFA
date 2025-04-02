@@ -1,7 +1,18 @@
 digraph {
-	S0 [fillcolor=lightgrey shape=circle style=filled]
+	nodesep=0.5 rankdir=LR ranksep=0.5
+	S2 [fillcolor=lightgrey shape=circle style=filled]
 	"" [shape=point]
-	"" -> S0 [label=start]
+	"" -> S2 [label=start]
 	S0 [shape=doublecircle]
-	S0 -> S0 [label="a-b"]
+	S0 -> S3 [label=a]
+	S0 -> S2 [label=b]
+	S1 [shape=circle]
+	S1 -> S3 [label=a]
+	S1 -> S0 [label=b]
+	S2 [shape=circle]
+	S2 -> S3 [label=a]
+	S2 -> S2 [label=b]
+	S3 [shape=circle]
+	S3 -> S3 [label=a]
+	S3 -> S1 [label=b]
 }
