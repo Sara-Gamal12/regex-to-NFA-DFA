@@ -1,14 +1,7 @@
 digraph {
-	S3 [fillcolor=lightgrey shape=circle style=filled]
+	S0 [fillcolor=lightgrey shape=circle style=filled]
 	"" [shape=point]
-	"" -> S3 [label=start]
+	"" -> S0 [label=start]
 	S0 [shape=doublecircle]
-	S1 [shape=circle]
-	S1 -> S0 [label=d]
-	S2 [shape=circle]
-	S2 -> S1 [label=c]
-	S3 [shape=circle]
-	S3 -> S4 [label=a]
-	S4 [shape=circle]
-	S4 -> S2 [label=b]
+	S0 -> S0 [label="a-b"]
 }
