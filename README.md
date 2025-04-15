@@ -1,9 +1,9 @@
-<h1 >Regex to Minimized DFA Converter</h1>  
+<h1 align="center">Regex to Minimized DFA Converter</h1>
 
-## 🛠️ Project Overview
+##  Project Overview
 This tool transforms a Regular Expression to NFA to Minimized DFA, with full visualization and JSON export.
 
-## 🚧 Key Features
+##  Key Features
 ###  Part 1: Regex to  NFA
 
 Built using Thompson's Construction
